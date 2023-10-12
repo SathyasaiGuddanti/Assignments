@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="apply-Box">
+            <h1>Customer Survey Form</h1>
+            <form id="myForm">
+                <div class="form-container">
+                    <div class="form-control">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="DOB">D.O.B</label>
+                        <input type="date" id="DOB" name="DOB" placeholder="Enter DOB" required />
+                    </div>
+                    <div >
+                        <label for="gender" style="font-weight: bold;">Gender</label>
+                        <div class="gender-options">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+
+                            <input type="radio" id="others" name="gender" value="others">
+                            <label for="others">Others</label>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option value="select">Choose Country</option>
+                            <option value="usa">United States of America</option>
+                            <option value="india">India</option>
+                            <option value="canada">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="australia">Australia</option>
+                            <option value="france">France</option>
+                            <option value="germany">Germany</option>
+                            <option value="japan">Japan</option>
+                            <option value="china">China</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="profession">Profession</label>
+                        <input type="text" id="profession" name="profession" placeholder="Enter your Profession." required />
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter email" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <input id="mobileNumber" name="mobileNumber" type="tel" pattern="[0-9]{10}" placeholder="Enter a 10 digit mobile number..." required />
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" onclick="submitForm()">Submit</button>
+                        <button type="button" onclick="resetForm()">Reset</button>
+                    </div>
+                    
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="popup">
+        <div id="popup-content">
+            <p>Entered Values:</p>
+            <p>First Name: <span id="popup-first-name"></span></p>
+            <p>Last Name: <span id="popup-last-name"></span></p>
+            <p>DOB: <span id="popup-dob"></span></p>
+            <p>Gender: <span id="popup-gender"></span></p>
+            <p>Country: <span id="popup-country"></span></p>
+            <p>Profession: <span id="popup-profession"></span></p>
+            <p>Email: <span id="popup-email"></span></p>
+            <p>Mobile Number: <span id="popup-mobile-number"></span></p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
